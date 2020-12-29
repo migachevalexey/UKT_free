@@ -1,0 +1,24 @@
+transaction	STRING	NULLABLE	ID заказа в MySQL master_order_id: php - 0983... hybris - 0901....
+kpp	INTEGER	NULLABLE	ID клиента, он же userID в GA, 0982...-B2b rkbtyns
+summa	FLOAT	NULLABLE	первичная сумма заказа
+date	STRING	NULLABLE	дата заказа, тянем из MySQL
+money	FLOAT	NULLABLE	оплаченная сумма заказа
+orderSource	STRING	NULLABLE	принимаемые значения - Web, mobileWeb, App iOS, App Android, CallCenter, AlisaBot
+channel	STRING	NULLABLE	группа каналов из GA: Paid Search, Organic Search, Direct, Other Advertising, (Other), Referral, Social, Email, Display
+medium	STRING	NULLABLE	канал из GA: cpc, organic, email, cpa, referral, mailing и т.д.
+source	STRING	NULLABLE	источник из GA: yandex,(direct), google, SAPHybris, admitad, criteo, letter, flocktory и т.д.
+campaign	STRING	NULLABLE	рекламная кампания
+keyword	STRING	NULLABLE	ключевое слово. Не только в рекламе, бывает и в Organic
+device	STRING	NULLABLE	Тип устройства из GA: desktop, mobile, tablet
+siteType	STRING	NULLABLE	dimension12 из GA: website, website-mobile, website_hybris
+browser	STRING	NULLABLE	Браузер
+firstOrder	INTEGER	NULLABLE	первый ли заказ. 1 - первый, 0 - НЕ первый
+time	STRING	NULLABLE	время заказа, тянем из MySQL
+canceled	INTEGER	NULLABLE	отмененный. 1 - отменен, 0 - НЕ отменен
+hour	INTEGER	NULLABLE	час, в котором сделан заказ, тянем из MySQL
+clientId	STRING	NULLABLE	ClientId из GA, ios_idfa - для iOS App, android_id - Android App
+shipping	STRING	NULLABLE	метод доставки: На дом, В продуктомат, PickPoint, FreshLocker, StrongPoint, ЗдравСити
+paymentType	STRING	NULLABLE	метод оплаты: Оплата при получении, Предоплата, Google Pay, Оплата Apple Pay, Отсрочка платежа, Оплата картой сейчас, Оплата картой сейчас без 3DS
+city	STRING	NULLABLE	город
+userTypeGA	STRING	NULLABLE	Разбивка по GA: Returning Visitor, New Visitor
+simpleSource	STRING	NULLABLE	Более детально: Web, Mobile iOS, Mobile Android, Desktop iOS, Desktop Android, App iOS, App Android, CallCenter
