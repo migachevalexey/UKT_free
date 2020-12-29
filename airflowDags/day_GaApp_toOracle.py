@@ -92,7 +92,7 @@ def date_fromGA(date_st,date_sp):
 
 def data_fromMetrika(date_st,date_sp):
 
-    params_sess = {'lang': 'ru', 'request_domain': 'ru', 'id': 516239,
+    params_sess = {'lang': 'ru', 'request_domain': 'ru', 'id': 516000,
                    'date1': date_st, 'date2': date_sp, 'metrics': 'ym:s:sessions', 'dimensions': 'ym:s:date',
                    'sort': '-ym:s:date', 'offset': 1, 'limit': 61, 'accuracy': 1, 'proposedAccuracy': 'true'}
     response_ses = requests.get('https://api.appmetrica.yandex.ru/stat/v1/data', params=params_sess,

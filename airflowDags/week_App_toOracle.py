@@ -59,13 +59,13 @@ def week_FromAppMetrika(d_start, d_stop):
     d = []
     for i,j in apps.items():
         params_sess = {'lang': 'ru', 'request_domain': 'ru',
-                       'filters': "exists ym:d:device with (appID=='{}')".format(i), 'id': 516239,
+                       'filters': "exists ym:d:device with (appID=='{}')".format(i), 'id': 516000,
                        'date1': d_start, 'date2': d_stop, 'metrics': 'ym:s:sessions', 'dimensions': 'ym:s:date',
                        'sort': '-ym:s:date', 'offset': 1, 'limit': 10, 'accuracy': 1, 'proposedAccuracy': 'true'}
         response_ses = requests.get('https://api.appmetrica.yandex.ru/stat/v1/data', params=params_sess,
                                     headers={'Authorization': 'OAuth ' + token}).json()
         params_users = {'lang': 'ru', 'request_domain': 'ru',
-                        'filters': "exists ym:d:device with (appID=='{}')".format(i), 'id': 516239,
+                        'filters': "exists ym:d:device with (appID=='{}')".format(i), 'id': 516000,
                         'date1': d_start, 'date2': d_stop, 'metrics': 'ym:u:activeUsers',
                         'dimensions': 'ym:u:date', 'sort': '-ym:u:date', 'include_undefined': 'true', 'offset': 1,
                         'limit': 10, 'accuracy': 1, 'proposedAccuracy': 'true'}
